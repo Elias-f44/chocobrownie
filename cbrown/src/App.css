@@ -1,0 +1,112 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.App-header {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #61dafb;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.App-header:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: -webkit-linear-gradient(#ff6b6b, #ffd93d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffd93d;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.team-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px 30px; /* Adjusts spacing between items */
+  font-size: 1.2rem;
+}
+
+.team-list li {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.team-list li:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  color: #ffd93d;
+}
+
+.team-list li:hover a {
+  color: #ffd93d;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #61dafb;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: #ff4757;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

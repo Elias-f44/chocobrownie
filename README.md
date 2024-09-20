@@ -1,2 +1,0 @@
-## Inteodution
-Generate with chatGPT

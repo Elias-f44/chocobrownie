@@ -83,7 +83,7 @@ function App() {
               >
                 Henry
               </a>
-              <span className="email">henry@example.com</span>
+              <span className="email">21hx14@queensu.ca</span>
             </div>
           </li>
         </ul>

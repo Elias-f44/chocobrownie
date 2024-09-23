@@ -70,7 +70,7 @@ function App() {
               >
                 Amaan
               </a>
-              <span className="email">amaan@example.com</span>
+              <span className="email">amaan.javed@queensu.ca</span>
             </div>
           </li>
           <li className="team-member">

@@ -31,7 +31,7 @@ function App() {
               >
                 Momin
               </a>
-              <span className="email">momin@example.com</span>
+              <span className="email">momin.alvi@queensu.ca</span>
             </div>
           </li>
           <li className="team-member">
@@ -57,7 +57,7 @@ function App() {
               >
                 Elill
               </a>
-              <span className="email">elill@example.com</span>
+              <span className="email">21em73@queensu.ca</span>
             </div>
           </li>
           <li className="team-member">

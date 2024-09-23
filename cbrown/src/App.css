@@ -33,6 +33,30 @@
   -webkit-text-fill-color: transparent;
 }
 
+.team-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.team-list li {
+  margin-bottom: 10px; /* Adds space between each team member */
+}
+
+.team-list a {
+  display: block; /* Ensures the name and email are vertically aligned */
+  font-size: 1rem; /* Regular size for the name */
+  text-decoration: none;
+  color: #000; /* Change color as needed */
+}
+
+.email {
+  font-size: 0.8rem; /* Smaller text for the email */
+  color: #666; /* Lighter color for distinction */
+  display: block; /* Ensures the email appears on its own line */
+  margin-top: 2px; /* Small gap between the name and the email */
+}
+
+
 .subtitle {
   font-size: 1.8rem;
   margin-bottom: 15px;

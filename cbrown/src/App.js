@@ -1,11 +1,21 @@
-// src/App.js
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import A1 from './A1';
+import A2 from './A2';
+import A3 from './A3';
 
 function App() {
-  return (
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  }
+
+  const Home = () => (
     <div className="App">
       <header className="App-header">
-        <h1 className="title">Welcome to the chocobrownie!</h1>
+        <h1 className="title">Welcome to chocobrownie!</h1>
         <p className="subtitle">Team Members</p>
         <ul className="team-list">
           <li className="team-member">
@@ -87,11 +97,46 @@ function App() {
             </div>
           </li>
         </ul>
-        <p className="description">
-          Check out our amazing project!
-        </p>
+        <p className="description">Check out our amazing project!</p>
       </header>
     </div>
+  );
+
+  return (
+    <Router>
+      <div className="App">
+        {/* Message beside the hamburger */}
+        <button className="hamburger" onClick={toggleMenu}>
+          &#9776; {/* Hamburger icon */}
+        </button>
+        <span className="hamburger-message">Click here to view our different projects</span>
+
+        <nav className={`dropdown-menu ${isOpen ? 'active' : ''}`}>
+          <ul>
+            <li>
+              <Link to="/" onClick={toggleMenu}>Home</Link>
+            </li>
+            <li>
+              <Link to="/a1" onClick={toggleMenu}>A1</Link>
+            </li>
+            <li>
+              <Link to="/a2" onClick={toggleMenu}>A2</Link>
+            </li>
+            <li>
+              <Link to="/a3" onClick={toggleMenu}>A3</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Define routes for each page */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/a1" element={<A1 />} />
+          <Route path="/a2" element={<A2 />} />
+          <Route path="/a3" element={<A3 />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
